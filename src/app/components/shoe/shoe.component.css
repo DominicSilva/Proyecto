@@ -1,0 +1,10 @@
+.contenedor {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.952);
+}

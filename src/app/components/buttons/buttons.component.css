@@ -1,0 +1,29 @@
+.style2 img {
+    display: inline-block;
+    height: 10vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+.style2 {
+    margin-bottom: 30px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.icon1 {
+    margin-right: 100px;
+    background-color: transparent;
+}
+
+.icon2 {
+    margin-right: 100px;
+
+}
+
+.icon3 {
+    margin-right: 30px;
+}
