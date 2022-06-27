@@ -21,7 +21,7 @@
                         Carrito ({{productService.productos.length}})
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li  *ngFor="let producto of productService.productos; index as i"><img style="width: 20rem;" [src]="producto.imagen" alt=""><h2>{{producto.nombre}}</h2><button type="button" class="btn btn-outline-danger" (click)="productService.eliminarCarrito(i)">Eliminar</button></li>
+                        <li  *ngFor="let producto of productService.productos; index as i"><img style="width: 20rem;" [src]="producto.producto" alt=""><h2>{{producto.nombre}}</h2><button type="button" class="btn btn-outline-danger" (click)="productService.eliminarCarrito(i)">Eliminar</button></li>
                     </ul>
                 </li>
             </ul>

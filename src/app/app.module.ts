@@ -12,6 +12,8 @@ import { ButtonsComponent } from './components/buttons/buttons.component';
 import { CapComponent } from './components/cap/cap.component';
 import { BackgoundComponent } from './components/backgound/backgound.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CrearProductoComponent } from './components/crear-producto/crear-producto.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     ShoeComponent,
     ButtonsComponent,
     CapComponent,
-    BackgoundComponent
+    BackgoundComponent,
+    CrearProductoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

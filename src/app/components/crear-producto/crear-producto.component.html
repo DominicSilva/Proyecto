@@ -1,0 +1,45 @@
+<div class="container mt-5 text-light">
+
+    <!-- <h1 class="text-center">{{titulo_formulario | uppercase}} </h1> -->
+
+    <form [formGroup]="productoForm" (ngSubmit)="agregarProducto()"
+        class="row g-3 mt-5 container d-flex justify-content-center align-items-center flex-column">
+        <div class="col-6">
+            <label for="nombreContacto" class="form-label">Nombre</label>
+            <input type="text" class="form-control" formControlName="nombre">
+            <span class="text-danger fw-bold"
+            *ngIf="productoForm.get('nombre')?.hasError('required') && productoForm.get('nombre')?.touched">Nombre
+            invalido</span>
+        </div>
+        <div class="col-6">
+            <label for="infoContacto" class="form-label">Informacion</label>
+            <input type="email" class="form-control" formControlName="info">
+            <span class="text-danger fw-bold" *ngIf="productoForm.get('info')?.hasError('pattern')">Informacion
+                invalida</span>
+            <span class="text-danger fw-bold"
+                *ngIf="productoForm.get('info')?.hasError('required') && productoForm.get('info')?.touched">Informacion
+                obligatoria</span>
+        </div>
+        <div class="col-6">
+            <label for="precioContacto" class="form-label">Precio</label>
+            <input type="text" class="form-control" formControlName="precio">
+            <span class="text-danger fw-bold" *ngIf="productoForm.get('precio')?.hasError('pattern')">Precio invalido</span>
+            <span class="text-danger fw-bold"
+                *ngIf="productoForm.get('precio')?.hasError('required') && productoForm.get('precio')?.touched">Precio
+                obligatorio</span>
+        </div>
+        <div class="col-6">
+            <label for="imagenContacto" class="form-label">Imagen</label>
+            <input type="text" class="form-control" formControlName="producto">
+            <span class="text-danger fw-bold" *ngIf="productoForm.get('producto')?.hasError('pattern')">Imagen invalida</span>
+            <span class="text-danger fw-bold"
+                *ngIf="productoForm.get('producto')?.hasError('required') && productoForm.get('producto')?.touched">Imagen
+                obligatoria</span>
+        </div>
+        <div class="col-6">
+            <button type="submit" [disabled]="productoForm.invalid" class="btn btn-dark">Enviar</button>
+        </div>
+    </form>
+</div>
+
+
